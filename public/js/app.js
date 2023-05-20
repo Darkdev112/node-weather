@@ -15,7 +15,7 @@ weatherForm.addEventListener('submit', (e) => {
     msg1.textContent = "Loading...."
 
     if(latitude && longitude){      
-        fetch(`http://localhost:3000/weather?latitude=${latitude}&longitude=${longitude}`)
+        fetch(`/weather?latitude=${latitude}&longitude=${longitude}`)
             .then((response) => {
                 return response.json()
             }).then((data) => {
